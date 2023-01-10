@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="styles.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <title>Recipes</title>
+  </head>
+  <body>
+  	<section class="container-fluid">
+		<div class="navbar-div"></div>
+		<nav class="navbar navbar-light bg-light d-flex justify-content-around">
+			<div class="navbar-brand"><i class="bi bi-x-circle"></i> Clear Recipes</div>
+			<select class="form-select select-recipe" >
+				<option class="option-one">Select a recipe</option>
+				<option>Apple pie recipe</option>
+				<option>Chocolate cookies</option>
+			  </select>
+			  
+		  </nav>
+		</section>
+
+	<section class="container">
+		<div class="row d-flex justify-content-between">
+			<div class="col-7">
+				<h4 class="available-recipes mb-0 pl-2">Available recipes</h4>
+				<div class="recipes bg-light px-4 py-2">
+					<div class="recipe-item mb-4" data-recipe="0">
+						<button onclick="deleteRecipe(event)" class="bi bi-trash delete-button">Delete</button>
+						<button onclick="editRecipe(event)" class="edit-recipe">Edit</button>
+						<h5>Apple pie recipe</h5>
+						<p class="description mt-2">Our homemade apple pie is sure to be the best apple pie recipe you've made to date. For starters, you can make this warm, cozy, classic dessert in three simple steps, and it's made with the ultimate baking shortcut: Pillsbury™ Pie Crusts.</p>
+						<p class="about-recipe">Portion(s) <span class="portions">5</span> min(s) <span class="time">60</span> Difficulty <span class="difficulty">3</span></p>
+						<ol class="preparation pl-4">
+							<li>Peel and core apples. then thinly slice. Set aside.</li>
+							<li>Preheat the oven to 425 degrees F (220 degrees C).</li>
+							<li>Melt butter in a saucepan over medium heat. Add flour and stir to form a paste; cook until fragrant. about 1 to 2 minutes. Add both sugars and water; bring to a boil. Reduce the heat to low and simmer for 3 to 5 minutes. Remove from the heat.</li>
+						</ol>
+					</div>
+					<div class="recipe-item" data-recipe="1">
+						<button onclick="deleteRecipe(event)" class="bi bi-trash delete-button">Delete</button>
+						<button onclick = 'editRecipe(event)' class="edit-recipe">Edit</button>
+						<h5>Chocolate cookies</h5>
+						<p class="description mt-2">These delicious chocolate cookies taste like brownies. They're crisp on the outside, soft, and fudgy on the inside.</p>
+						<p class="about-recipe">Portion(s) <span class="portions">8</span> min(s) <span class="time">30</span> Difficulty <span class="difficulty">5</span></p>
+						<ol class="preparation pl-4">
+							<li>Preheat oven to 375 degrees F. Line a baking pan with parchment paper and set aside.</li>
+							<li>In a separate bowl mix flour. baking soda. salt. baking powder. Set aside</li>
+							<li>Cream together butter and sugars until combined.</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+			<div class="col-4">
+				<div class="row">
+					<div class="col-12">
+						<div class="about bg-light">
+							<h4 class="about pl-2">About</h4>
+							<div class="p-3">
+								<div>
+									<p class="mb-0 ">Recipe title</p>
+									<input type="text" class="form-control mb-2 recipe-title recipe-input" placeholder="Title">
+								</div>
+								<div>
+									<p class="mb-0">Description</p>
+									<textarea class="form-control mb-2 recipe-description recipe-input" placeholder="About the recipe" rows="6"></textarea>
+								</div>
+								<span>Portions</span>
+								<select class="form-select recipe-portions recipe-input">
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+									<option>6</option>
+									<option>7</option>
+									<option>8</option>
+								</select>
+								<span>Time</span>
+								<select class="form-select recipe-time recipe-input">
+									<option>1</option>
+									<option>5</option>
+									<option>10</option>
+									<option>15</option>
+									<option>20</option>
+									<option>30</option>
+									<option>40</option>
+									<option>60</option>
+								</select>
+								<span>Difficulty</span>
+								<select class="form-select recipe-difficulty recipe-input">
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+									<option>6</option>
+									<option>7</option>
+									<option>8</option>
+									<option>9</option>
+									<option>10</option>
+									</select>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12 mt-4">
+						<h4 class="steps mb-0 pl-2">Steps</h4>
+						<div class="steps bg-light p-3">
+							<div>
+								<p class="mb-0">Steps</p>
+								<textarea class="form-control mb-2 recipe-steps recipe-input" placeholder="Steps description" rows="6"></textarea>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<div class="row mb-3">
+					<div class="col-6 text-center pr-0">
+						<button class="cancel-button"><span class=" bi bi-x-circle-fill pr-2"></span>Cancel</button>
+					</div>
+					<div class="col-6 text-center buttons pl-0">
+						<button class="save-recipe"><span class=" bi bi-save-fill pr-2"></span>Save recipe</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+    <script src="project.js"></script>
+  </body>
+</html>

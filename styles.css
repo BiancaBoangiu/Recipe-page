@@ -1,0 +1,43 @@
+body{
+    font-family: Tahoma;
+    color: #444;
+    box-sizing: border-box;
+    font-size: 8 px;
+}
+
+.navbar-div{
+    background-color: #b53535;
+    height: 50px;
+    width: 100%;
+}
+
+.available-recipes, h4.about, .steps{
+    background-color: #b53535;
+    color: #000;}
+
+.cancel-button, .save-recipe{
+    width: 100%;
+    border: 3px solid  #b53535;
+
+}
+
+.save-recipe{
+    background-color: #b53535;
+}
+
+.delete-button{
+    float: right;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.edit-recipe{
+    float: right;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+
+
+
+
